@@ -1,13 +1,268 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+body,
+#root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  max-width: 1600px;
+  position: relative;
+}
+
+/* Mobile View */
+
+.mobileHeader {
+  display: flex;
+  background-color: #0e3783;
+
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+
+  height: 70px;
+  line-height: 0;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.mobileHeader .mobileLogo {
+  border: 1px solid rgb(39, 185, 230);
+  margin-left: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobileHeader .mobileLogo:hover {
+  scale: 1.05;
+}
+
+.mobileHeader h3 {
+  position: absolute;
+  right: 3rem;
+  top: 25%;
+  color: rgb(204, 194, 194);
+}
+
+.mobileNavigation {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 2px 0px 4px 3px #d3d3d3;
+  padding-top: 1rem;
+  height: 70px;
+
+  color: rgb(44, 27, 27);
+}
+
+.mobileNavigation div {
+  min-width: 74px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 0;
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+
+.mobileNavigation div:hover {
+  scale: 1.05;
+}
+
+.mobileNavigation .active {
+  color: #0e3783;
+}
+
+.mobileNavigation .active p {
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #0e3783;
+}
+
+.mobileMore {
+  position: relative;
+}
+
+.more {
+  position: absolute;
+  top: -18rem;
+  right: 0;
+  width: 8rem;
+  box-shadow: 2px 0px 4px 2px #d3d3d3;
+  padding-top: 1rem;
+  border-radius: 10px;
+}
+
+.desktopLogout {
+  display: none;
+}
+
+.more div {
+  float: left;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.more div:hover {
+  scale: 1.1;
+}
+
+.more div p {
+  margin-left: 1rem;
+}
+
+.navigation {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+.desktopNavProfile {
+  display: none;
+}
+
+/* Dashbord content */
+
+.quickAccessContainer {
+  width: 90%;
+  margin: auto;
+}
+
+.quickAccessContainer h3 {
+  text-align: center;
+}
+
+.quickAccess {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1rem;
+}
+
+.quickAccess div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #0e3783;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.quickAccess div p {
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+  .mobileNavigation {
+    display: none;
+  }
+
+  header {
+    width: 90vw;
+  }
+
+  footer {
+    width: 98%;
+    margin: auto;
+    max-width: 1500px;
+  }
+
+  .mobileHeader {
+    width: 98%;
+    max-width: 1500px;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+  .mobileHeader h3 {
+    position: relative;
+    margin-left: 6rem;
+    margin-top: -0.8rem;
+    font-size: 1.4rem;
+  }
+
+  .navigation {
+    background-color: #0e3783;
+    width: 11rem;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    display: block;
+  }
+  .navigation div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    transition: all 0.4s ease-out;
+    padding: 0 0.8rem;
+    border-radius: 10px;
+  }
+  .navigation div:hover {
+    scale: 1.05;
+    background-color: #2464da;
+  }
+
+  .navigation div p {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .navigation .active {
+    background-color: #679af8;
+  }
+
+  .desktopLogout {
+    display: flex;
+    font-weight: 700;
+
+    position: absolute;
+    right: 1.5rem;
+    width: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .desktopNavProfile {
+    display: block;
+    background-color: #0e3783;
+    width: 11rem;
+    padding: 0.2rem;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  /* Dashboard */
+  .dashboardContainer {
+    width: 80%;
+    position: absolute;
+    top: 5rem;
+    left: 20rem;
+    max-width: 1000px;
+  }
 }
