@@ -24,7 +24,7 @@ body,
   display: flex;
   background-color: #0e3783;
 
-  width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
 
@@ -291,5 +291,7 @@ body,
 
   .desktopContainer {
     display: flex;
+    max-width: 96vw;
+    margin: auto;
   }
 }
