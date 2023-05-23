@@ -102,6 +102,7 @@ body,
   box-shadow: 2px 0px 4px 2px #d3d3d3;
   padding-top: 1rem;
   border-radius: 10px;
+  background-color: white;
 }
 
 .desktopLogout {
@@ -114,6 +115,8 @@ body,
   align-items: center;
   padding: 0.5rem;
   cursor: pointer;
+  background-color: white;
+  z-index: 1000;
 }
 
 .more div:hover {
@@ -153,7 +156,7 @@ body,
   gap: 1rem;
 }
 
-.quickAccess div {
+.quickAccess .cardBox {
   display: flex;
   align-items: center;
   border: 1px solid #0e3783;
@@ -162,6 +165,24 @@ body,
   padding: 0 1rem;
   height: 4rem;
   cursor: pointer;
+}
+
+.quickAccess .cardBoxText {
+  display: flex;
+  position: relative;
+}
+.quickAccess .cardBoxText span {
+  position: absolute;
+  left: 4.5rem;
+  top: 0.5rem;
+  color: white;
+  font-weight: 700;
+  background-color: #0e3783;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5;
+  border-radius: 50%;
 }
 
 .quickAccess div p {
@@ -261,8 +282,11 @@ body,
   .dashboardContainer {
     width: 80%;
 
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1250px;
+
+    margin: 0.5rem auto;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px 2px #0e3783;
   }
 
   .desktopContainer {

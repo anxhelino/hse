@@ -4,7 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const CardBox = ({ value, icon }) => {
   return (
     <div className='cardBox'>
-      <p>{value}</p>
+      <div className='cardBoxText'>
+        <p>{value}</p>
+        {value === 'Accidents' ? (
+          <span>1</span>
+        ) : '' || value === 'My Audits' ? (
+          <span>1</span>
+        ) : (
+          ''
+        )}
+      </div>
       <FontAwesomeIcon icon={icon} id='Logout' />
     </div>
   );
