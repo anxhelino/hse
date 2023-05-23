@@ -13,7 +13,8 @@ body,
 }
 
 .mainContainer {
-  max-width: 1450px;
+  width: 96vw;
+  max-width: 1700px;
   position: relative;
   margin: auto;
 }
