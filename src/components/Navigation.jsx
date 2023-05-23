@@ -9,7 +9,7 @@ import {
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+
 import { useState } from 'react';
 
 const Navigation = () => {
