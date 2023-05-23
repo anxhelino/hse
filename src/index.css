@@ -194,6 +194,58 @@ body,
   font-weight: 700;
 }
 
+/* Map */
+
+.map {
+  margin: auto;
+  width: 90%;
+}
+
+.leaflet-container {
+  height: 30vh;
+  z-index: 1;
+}
+
+.locationContainer {
+  border-radius: 5px;
+  background-color: #144db8;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.locationDescription p {
+  padding-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+.mapFooter .checkSite {
+  text-align: center;
+  transition: all 0.3s ease-in;
+}
+
+.checkSite:hover {
+  cursor: pointer;
+  background-color: #2464da;
+  border-bottom-left-radius: 5px;
+}
+
+.mapFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mapFooter .siteReportMap {
+  background-color: hsl(38, 79%, 38%);
+  transition: all 0.3s ease-in;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+}
+
+.siteReportMap:hover {
+  background-color: hsl(38, 81%, 51%);
+}
+
 @media screen and (min-width: 700px) {
   .mobileNavigation {
     display: none;
@@ -297,6 +349,13 @@ body,
     display: flex;
     justify-content: center;
     max-width: 1520px;
+
     margin: auto;
+  }
+
+  .map {
+    width: 30vw;
+    float: left;
+    margin-left: 4rem;
   }
 }
