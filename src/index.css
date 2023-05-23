@@ -13,7 +13,6 @@ body,
 }
 
 .mainContainer {
-  width: 96vw;
   max-width: 1700px;
   position: relative;
   margin: auto;
@@ -25,7 +24,7 @@ body,
   display: flex;
   background-color: #0e3783;
 
-  max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 
