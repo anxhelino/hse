@@ -13,8 +13,9 @@ body,
 }
 
 .mainContainer {
-  max-width: 1600px;
+  max-width: 1450px;
   position: relative;
+  margin: auto;
 }
 
 /* Mobile View */
@@ -178,9 +179,8 @@ body,
   }
 
   footer {
-    width: 98%;
-    margin: auto;
-    max-width: 1500px;
+    width: fit-content;
+    margin-left: 1rem;
   }
 
   .mobileHeader {
@@ -260,9 +260,12 @@ body,
   /* Dashboard */
   .dashboardContainer {
     width: 80%;
-    position: absolute;
-    top: 5rem;
-    left: 20rem;
+
     max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .desktopContainer {
+    display: flex;
   }
 }

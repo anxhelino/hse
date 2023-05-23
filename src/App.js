@@ -18,19 +18,21 @@ function App() {
     <div className='mainContainer'>
       <Header />
       <MobileNavigation />
-      <Navigation />
-      <Router>
-        <Routes>
-          <Route path='/' element={<Dashboard />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/audits' element={<Audits />} />
-          <Route path='/issues' element={<Issues />} />
-          <Route path='/policies' element={<Policies />} />
-          <Route path='/report' element={<Report />} />
-          <Route path='/sites' element={<Sites />} />
-          <Route path='/training' element={<Training />} />
-        </Routes>
-      </Router>
+      <div className='desktopContainer'>
+        <Navigation />
+        <Router>
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/audits' element={<Audits />} />
+            <Route path='/issues' element={<Issues />} />
+            <Route path='/policies' element={<Policies />} />
+            <Route path='/report' element={<Report />} />
+            <Route path='/sites' element={<Sites />} />
+            <Route path='/training' element={<Training />} />
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }
