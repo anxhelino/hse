@@ -208,7 +208,7 @@ body,
   }
 
   .mobileHeader {
-    width: 98%;
+    width: 98vw;
     max-width: 1500px;
     margin: auto;
     border-radius: 10px;
@@ -283,9 +283,9 @@ body,
   }
   /* Dashboard */
   .dashboardContainer {
-    width: 80%;
+    width: 85%;
 
-    max-width: 1250px;
+    max-width: 1350px;
 
     margin: 0.5rem auto;
     border-radius: 10px;
@@ -294,7 +294,8 @@ body,
 
   .desktopContainer {
     display: flex;
-    max-width: 96vw;
+    justify-content: center;
+    max-width: 1520px;
     margin: auto;
   }
 }
