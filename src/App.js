@@ -17,9 +17,9 @@ function App() {
   return (
     <div className='mainContainer'>
       <Header />
+      <MobileNavigation />
       <div className='desktopContainer'>
         <Router>
-          <MobileNavigation />
           <Navigation />
           <Routes>
             <Route path='/' element={<Dashboard />} />
