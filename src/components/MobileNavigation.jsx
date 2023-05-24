@@ -12,6 +12,7 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const MobileNavigation = () => {
   const [openMore, setOpenMore] = useState(false);
@@ -42,25 +43,33 @@ const MobileNavigation = () => {
   return (
     <footer>
       <div className='mobileNavigation' onClick={(e) => handlePageChange(e)}>
-        <div
-          className={activeLink === 'Dashboard' ? 'active' : ''}
-          id='Dashboard'
-        >
-          <FontAwesomeIcon icon={faHouse} id='Dashboard' />
-          <p id='Dashboard'>Dashboard</p>
-        </div>
-        <div id='Sites' className={activeLink === 'Sites' ? 'active' : ''}>
-          <FontAwesomeIcon icon={faMapLocationDot} id='Sites' />
-          <p id='Sites'>Sites</p>
-        </div>
-        <div id='Issues' className={activeLink === 'Issues' ? 'active' : ''}>
-          <FontAwesomeIcon icon={faCircleExclamation} id='Issues' />
-          <p id='Issues'>Issues</p>
-        </div>
-        <div id='About' className={activeLink === 'About' ? 'active' : ''}>
-          <FontAwesomeIcon icon={faCircleInfo} id='About' />
-          <p id='About'>About</p>
-        </div>
+        <Link to='/'>
+          <div
+            className={activeLink === 'Dashboard' ? 'active' : ''}
+            id='Dashboard'
+          >
+            <FontAwesomeIcon icon={faHouse} id='Dashboard' />
+            <p id='Dashboard'>Dashboard</p>
+          </div>
+        </Link>
+        <Link to='sites'>
+          <div id='Sites' className={activeLink === 'Sites' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faMapLocationDot} id='Sites' />
+            <p id='Sites'>Sites</p>
+          </div>
+        </Link>
+        <Link to='issues'>
+          <div id='Issues' className={activeLink === 'Issues' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faCircleExclamation} id='Issues' />
+            <p id='Issues'>Issues</p>
+          </div>
+        </Link>
+        <Link to='about'>
+          <div id='About' className={activeLink === 'About' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faCircleInfo} id='About' />
+            <p id='About'>About</p>
+          </div>
+        </Link>
         <div
           className={activeLink === 'More' ? 'mobileMore active' : 'mobileMore'}
           onClick={() => toggleMore()}
@@ -69,22 +78,31 @@ const MobileNavigation = () => {
           <FontAwesomeIcon icon={faBars} id='More' />
           <p id='More'>More</p>
           <div className={openMore ? 'more' : 'more hidden'}>
-            <div id='Training'>
-              <FontAwesomeIcon icon={faGraduationCap} id='Training' />
-              <p id='Training'>Training</p>
-            </div>
-            <div id='Policies'>
-              <FontAwesomeIcon icon={faBook} id='Policies' />
-              <p id='Policies'>Policies</p>
-            </div>
-            <div id='Report'>
-              <FontAwesomeIcon icon={faFlag} id='Report' />
-              <p id='Report'>Report</p>
-            </div>
-            <div id='Audits'>
-              <FontAwesomeIcon icon={faMagnifyingGlassLocation} id='Audits' />
-              <p id='Audits'>Audits</p>
-            </div>
+            <Link to='training'>
+              <div id='Training'>
+                <FontAwesomeIcon icon={faGraduationCap} id='Training' />
+                <p id='Training'>Training</p>
+              </div>
+            </Link>
+            <Link to='policies'>
+              <div id='Policies'>
+                <FontAwesomeIcon icon={faBook} id='Policies' />
+                <p id='Policies'>Policies</p>
+              </div>
+            </Link>
+            <Link to='report'>
+              <div id='Report'>
+                <FontAwesomeIcon icon={faFlag} id='Report' />
+                <p id='Report'>Report</p>
+              </div>
+            </Link>
+            <Link to='audits'>
+              <div id='Audits'>
+                <FontAwesomeIcon icon={faMagnifyingGlassLocation} id='Audits' />
+                <p id='Audits'>Audits</p>
+              </div>
+            </Link>
+
             <div id='Logout'>
               <FontAwesomeIcon icon={faRightFromBracket} id='Logout' />
               <p id='Logout'>Logout</p>

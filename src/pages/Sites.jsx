@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sites = () => {
-  return <div>Sites</div>;
+  return <div className='dashboardContainer'>Sites</div>;
 };
 
 export default Sites;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Training = () => {
-  return <div>Training</div>;
+  return <div className='dashboardContainer'>Training</div>;
 };
 
 export default Training;
