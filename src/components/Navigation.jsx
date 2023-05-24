@@ -88,10 +88,10 @@ const Navigation = () => {
             <p id='audits'>Audits</p>
           </div>
         </Link>
-        <Link to='dairy'>
-          <div id='Dairy'>
-            <FontAwesomeIcon icon={faMagnifyingGlassLocation} id='Dairy' />
-            <p id='Dairy'>Dairy</p>
+        <Link to='diary'>
+          <div id='Diary'>
+            <FontAwesomeIcon icon={faMagnifyingGlassLocation} id='Diary' />
+            <p id='Diary'>Diary</p>
           </div>
         </Link>
       </div>
