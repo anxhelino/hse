@@ -17,9 +17,7 @@ a {
 }
 
 .mainContainer {
-  max-width: 1700px;
   position: relative;
-  margin: auto;
 }
 
 /* Mobile View */
@@ -106,7 +104,7 @@ a {
 
 .more {
   position: absolute;
-  top: -18rem;
+  top: -21.5rem;
   right: 0;
   width: 8rem;
   box-shadow: 2px 0px 4px 2px #d3d3d3;
@@ -254,6 +252,15 @@ a {
   background-color: hsl(38, 81%, 51%);
 }
 
+.dashboardContainer {
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+.mapContainer {
+  margin-bottom: 10rem;
+}
+
 @media screen and (min-width: 700px) {
   .mobileNavigation {
     display: none;
@@ -270,7 +277,7 @@ a {
 
   .mobileHeader {
     width: 98vw;
-    max-width: 1500px;
+    max-width: 1700px;
     margin: auto;
     border-radius: 10px;
   }
@@ -290,8 +297,10 @@ a {
     width: 11rem;
     margin: 0.5rem 0;
     padding: 1rem;
+    height: 100%;
     border-radius: 10px;
     display: block;
+    position: sticky;
   }
   .navigation div {
     display: flex;
@@ -349,16 +358,15 @@ a {
     max-width: 1350px;
 
     margin: 0.5rem auto;
-    border-radius: 10px;
-    box-shadow: 1px 3px 10px 2px #0e3783;
+    /* border-radius: 10px;
+    box-shadow: 1px 3px 10px 2px #0e3783; */
   }
 
   .desktopContainer {
     display: flex;
-    justify-content: center;
-    max-width: 1520px;
-
-    margin: auto;
+    /* justify-content: center; */
+    max-width: 1700px;
+    margin-left: -0.5rem;
   }
 
   .map {

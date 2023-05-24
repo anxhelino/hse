@@ -11,6 +11,7 @@ import {
   Report,
   Sites,
   Training,
+  Diary,
 } from './pages';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path='/report' element={<Report />} />
             <Route path='/sites' element={<Sites />} />
             <Route path='/training' element={<Training />} />
+            <Route path='/dairy' element={<Diary />} />
           </Routes>
         </Router>
       </div>

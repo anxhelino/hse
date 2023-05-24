@@ -102,6 +102,12 @@ const MobileNavigation = () => {
                 <p id='Audits'>Audits</p>
               </div>
             </Link>
+            <Link to='dairy'>
+              <div id='Dairy'>
+                <FontAwesomeIcon icon={faMagnifyingGlassLocation} id='Dairy' />
+                <p id='Dairy'>Dairy</p>
+              </div>
+            </Link>
 
             <div id='Logout'>
               <FontAwesomeIcon icon={faRightFromBracket} id='Logout' />

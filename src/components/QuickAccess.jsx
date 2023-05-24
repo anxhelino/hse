@@ -9,7 +9,7 @@ import {
 
 const boxData = [
   {
-    value: 'Report Issue',
+    value: 'Daily Happenings',
     icon: faCircleExclamation,
   },
   {
