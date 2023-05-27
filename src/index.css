@@ -17,6 +17,9 @@ a {
 
 .mainContainer {
   position: relative;
+  max-width: 1700px;
+
+  margin: auto;
 }
 
 /* Mobile View */
@@ -267,18 +270,17 @@ a {
 
   footer {
     width: fit-content;
-    margin-left: 0.5rem;
+
     min-height: 100%;
     position: sticky;
-
+    background-color: #0e3783;
     top: 0;
+    border-bottom-right-radius: 60px;
   }
 
   .mobileHeader {
-    width: 98dvw;
-    max-width: 1700px;
     margin: auto;
-    border-radius: 10px;
+    border-bottom: 2px solid white;
   }
 
   h1 {
@@ -295,8 +297,9 @@ a {
     display: flex;
     /* justify-content: center; */
     max-width: 1700px;
+
     align-items: flex-start;
-    margin-left: -0.5rem;
+    height: 100%;
     margin: auto;
   }
 
@@ -306,10 +309,10 @@ a {
     margin: 0.5rem 0;
     padding: 1rem;
     min-height: 100%;
-    border-radius: 10px;
+
     display: block;
     position: sticky;
-
+    border-bottom-right-radius: 60px;
     top: 0;
   }
   .navigation div {
@@ -355,7 +358,7 @@ a {
     width: 11rem;
     padding: 0.2rem;
     margin-top: 0.5rem;
-    border-radius: 10px;
+
     color: white;
     font-weight: 700;
     text-align: center;
