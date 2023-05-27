@@ -1,6 +1,7 @@
 import QuickAccess from '../components/QuickAccess';
 import Map from '../components/Map';
 import SafetyCards from '../components/SafetyCards';
+import SafetyDashboard from '../components/SafetyDashboard';
 
 const Dashboard = () => {
   return (
@@ -10,6 +11,7 @@ const Dashboard = () => {
         <Map />
         <SafetyCards />
       </div>
+      <SafetyDashboard />
     </div>
   );
 };

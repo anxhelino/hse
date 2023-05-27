@@ -5,7 +5,6 @@ body,
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', sans-serif;
-  height: 100vh;
 }
 
 * {
@@ -26,7 +25,7 @@ a {
   display: flex;
   background-color: #0e3783;
 
-  max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -266,14 +265,14 @@ a {
     display: none;
   }
 
-  /* header {
-    width: 90vw;
-  } */
+  header {
+    width: 100%;
+  }
 
   footer {
     width: fit-content;
     margin-left: 0.5rem;
-    height: 100dvh;
+    min-height: 100%;
     position: sticky;
 
     top: 0;
@@ -310,7 +309,7 @@ a {
     width: 11rem;
     margin: 0.5rem 0;
     padding: 1rem;
-    height: 100dvh;
+    min-height: 100%;
     border-radius: 10px;
     display: block;
     position: sticky;
@@ -381,7 +380,9 @@ a {
     width: 30vw;
     margin: 0;
     padding: 0;
+    min-height: 20vh;
     margin-top: 1rem;
+    max-width: 550px;
   }
 
   .dashboardGridContainer {
@@ -438,5 +439,43 @@ a {
   }
   .safetyCard p {
     margin-bottom: 0.2rem;
+  }
+
+  .safetyDashboardContainer {
+    width: 93%;
+    margin: auto;
+    box-shadow: 2px 0px 4px 3px #d3d3d3;
+  }
+  .safetyDashboardTitle {
+    padding: 1rem;
+    background-color: #d3d3d3;
+  }
+
+  .safetyDashboardCard {
+    width: 350px;
+    text-align: center;
+    border: 1px solid #acacac;
+    padding: 3.5rem;
+  }
+
+  .safetyDashboardCard div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2.7rem;
+  }
+
+  .safetyDashboardCard p {
+    margin-left: 0.4rem;
+  }
+
+  .safetyDashboardCard h1 {
+    font-size: 3rem;
+  }
+
+  .safetyDashboardRow {
+    padding: 2rem;
+    display: flex;
   }
 }
