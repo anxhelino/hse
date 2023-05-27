@@ -265,10 +265,6 @@ a {
     display: none;
   }
 
-  header {
-    width: 100%;
-  }
-
   footer {
     width: fit-content;
     margin-left: 0.5rem;
@@ -279,7 +275,7 @@ a {
   }
 
   .mobileHeader {
-    width: 98vw;
+    width: 98dvw;
     max-width: 1700px;
     margin: auto;
     border-radius: 10px;
