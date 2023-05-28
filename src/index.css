@@ -313,6 +313,7 @@ a {
     display: block;
     position: sticky;
     border-bottom-right-radius: 60px;
+    height: 100dvh;
     top: 0;
   }
   .navigation div {

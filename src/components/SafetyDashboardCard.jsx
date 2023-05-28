@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const SafetyDashboardCard = ({ value, icon, text }) => {
+const SafetyDashboardCard = ({ data }) => {
+  const { value, text, icon } = data;
+  console.log(data);
   return (
     <div className='safetyDashboardCard'>
       <h1>{value}</h1>
