@@ -12,38 +12,39 @@ function App() {
 
   return (
     <div className='mainContainer'>
-      <Router>
-        <Header />
-        <div className='desktopContainer'>
-          {isAuthenticated && (
+    <Router>
+      {isAuthenticated && <Header />}
+      <div className='desktopContainer'>
+        {isAuthenticated && (
+          <>
+            <Navigation />
+            <MobileNavigation />
+          </>
+        )}
+        <Routes>
+          {isAuthenticated ? (
             <>
-              <Navigation />
-              <MobileNavigation />
+              <Route path='/' element={<Dashboard />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/audits' element={<Audits />} />
+              <Route path='/issues' element={<Issues />} />
+              <Route path='/policies' element={<Policies />} />
+              <Route path='/report' element={<Report />} />
+              <Route path='/sites' element={<Sites />} />
+              <Route path='/training' element={<Training />} />
+              <Route path='/diary' element={<Diary />} />
+            </>
+          ) : (
+            <>
+              <Route path='/' element={<LoginPage setIsAuthenticated={setIsAuthenticated} />} />
+              <Route path='/signup' element={<Signup setIsAuthenticated={setIsAuthenticated} />} />
             </>
           )}
-          <Routes>
-            {isAuthenticated ? (
-              <>
-                <Route path='/' element={<Dashboard />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/audits' element={<Audits />} />
-                <Route path='/issues' element={<Issues />} />
-                <Route path='/policies' element={<Policies />} />
-                <Route path='/report' element={<Report />} />
-                <Route path='/sites' element={<Sites />} />
-                <Route path='/training' element={<Training />} />
-                <Route path='/diary' element={<Diary />} />
-              </>
-            ) : (
-              <>
-                <Route path='/' element={<LoginPage setIsAuthenticated={setIsAuthenticated} />} />
-                <Route path='/signup' element={<Signup setIsAuthenticated={setIsAuthenticated} />} />
-              </>
-            )}
-          </Routes>
-        </div>
-      </Router>
-    </div>
+        </Routes>
+      </div>
+    </Router>
+  </div>
+  
   );
 }
 
