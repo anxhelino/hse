@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 const Map = () => {
   return (
     <div className='map'>
-      <div className='quickAccessContainer'>
+      <div>
         <h3>Nearest Site</h3>
       </div>
       <div className='locationContainer'>
@@ -28,7 +28,7 @@ const Map = () => {
         </MapContainer>
         <div className='mapFooter'>
           <div className='checkSite'>
-            <p>Check Site</p>
+            <p>Check In</p>
           </div>
           <div className='siteReportMap'>
             <p>Report Issue On Site</p>

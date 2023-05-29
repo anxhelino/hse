@@ -5,6 +5,7 @@ import {
   faGraduationCap,
   faHouse,
   faMagnifyingGlassLocation,
+  faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
@@ -28,7 +29,20 @@ const Navigation = () => {
   return (
     <footer>
       <div className='desktopNavProfile'>
-        <p>Welcome Anxhelino</p>
+        <p className='welcomeUserText'>Welcome Anxhelino</p>
+        <div
+          className='profileIcon'
+          onMouseOver={(e) => {
+            const text = document.querySelector('.welcomeUserText');
+            text.style.borderBottomColor = 'white';
+          }}
+          onMouseOut={(e) => {
+            const text = document.querySelector('.welcomeUserText');
+            text.style.borderBottomColor = 'transparent';
+          }}
+        >
+          <FontAwesomeIcon icon={faUser} id='Profile' />
+        </div>
       </div>
       <div className='navigation' onClick={(e) => handlePageChange(e)}>
         <Link to='/'>

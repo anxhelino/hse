@@ -4,12 +4,12 @@ import {
   faCircleExclamation,
   faCircleCheck,
   faTriangleExclamation,
-  faCircleQuestion,
+  faBook,
 } from '@fortawesome/free-solid-svg-icons';
 
 const boxData = [
   {
-    value: 'Daily Happenings',
+    value: 'Report Issue',
     icon: faCircleExclamation,
   },
   {
@@ -21,15 +21,17 @@ const boxData = [
     icon: faTriangleExclamation,
   },
   {
-    value: 'Platform Information',
-    icon: faCircleQuestion,
+    value: 'Company Documents',
+    icon: faBook,
   },
 ];
 
 const QuickAccess = () => {
   return (
     <div className='quickAccessContainer'>
-      <h3>Shortcuts</h3>
+      <div className='quickAccessText'>
+        <h3>Shortcuts</h3>
+      </div>
       <div className='quickAccess'>
         {boxData.map((box, index) => (
           <CardBox key={index} value={box.value} icon={box.icon} />

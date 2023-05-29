@@ -14,7 +14,9 @@ const CardBox = ({ value, icon }) => {
           ''
         )}
       </div>
-      <FontAwesomeIcon icon={icon} id='Logout' />
+      <div className='quickAccessIconContainer'>
+        <FontAwesomeIcon icon={icon} id='Logout' />
+      </div>
     </div>
   );
 };

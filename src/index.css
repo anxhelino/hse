@@ -176,6 +176,10 @@ a {
   padding: 0 1rem;
   height: 4rem;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.quickAccess .cardBox:hover {
+  scale: 1.05;
 }
 
 .quickAccess .cardBoxText {
@@ -266,6 +270,69 @@ a {
 @media screen and (min-width: 700px) {
   .mobileNavigation {
     display: none;
+  }
+
+  .quickAccessContainer {
+    width: 93%;
+    border: 1px solid #acacac;
+  }
+
+  .quickAccessText {
+    padding: 1rem;
+
+    height: 61px;
+    display: flex;
+    align-items: center;
+    background-color: #d3d3d3;
+
+    margin-bottom: 1rem;
+  }
+
+  .quickAccess {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .quickAccess .cardBox {
+    height: 11rem;
+    flex-direction: column;
+    width: 14rem;
+
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+
+    border: none;
+  }
+
+  .cardBoxText {
+    background-color: #0e3783;
+    width: 100%;
+    display: flex;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    justify-content: center;
+  }
+
+  .cardBoxText span {
+    display: none;
+  }
+
+  .quickAccessIconContainer svg {
+    width: 3rem;
+    height: 3rem;
+    color: white;
+  }
+  .quickAccessIconContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    background-color: #7e6f73;
   }
 
   footer {
@@ -453,10 +520,10 @@ a {
   }
 
   .safetyDashboardCard {
-    width: 350px;
+    width: 310px;
     text-align: center;
     border: 1px solid #acacac;
-    padding: 3.5rem;
+    padding: 2.5rem;
   }
 
   .safetyDashboardCard div {
@@ -479,4 +546,56 @@ a {
     padding: 2rem;
     display: flex;
   }
+
+  /* Audits table */
+
+  #auditsTable {
+    border-collapse: collapse;
+    width: 93%;
+    margin: auto;
+    font-size: 1.1rem;
+  }
+
+  .auditTargetsTable {
+    padding-bottom: 2rem;
+  }
+  #auditsTable td,
+  #auditsTable th {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  #auditsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .welcomeUserText {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.7s ease-out;
+  }
+
+  .profileIcon {
+    border: 1px solid white;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2;
+    text-align: center;
+    border-radius: 50%;
+    margin: auto;
+    cursor: pointer;
+    background-color: #306fe2;
+    transition: all 0.2s ease-in;
+  }
+
+  .profileIcon:hover {
+    scale: 1.1;
+    background-color: white;
+    color: #0e3783;
+    border: 1px solid #0f2142;
+  }
+
+  /* .profileIcon:hover .welcomeUserText {
+    border-bottom-color: white;
+  } */
 }

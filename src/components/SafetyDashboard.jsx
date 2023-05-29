@@ -79,7 +79,7 @@ const data = [
       cases: 50,
     },
     {
-      name: 'HLS Audits',
+      name: 'H&S Audits',
       cases: 40,
     },
     {
@@ -154,8 +154,8 @@ const SafetyDashboard = () => {
       {data.map((row, i) => {
         return (
           <>
-            <div className='safetyDashboardRow'>
-              <SafetyDashboardCard data={dataBox[i]} />
+            <div className='safetyDashboardRow' key={i}>
+              <SafetyDashboardCard key={row.text} data={dataBox[i]} />
               <Accidents data={row} />
             </div>
           </>
@@ -163,7 +163,7 @@ const SafetyDashboard = () => {
       })}
       <div className='safetyDashboardRow'>
         {damages.map((row, i) => {
-          return <SafetyDashboardCard data={row} />;
+          return <SafetyDashboardCard key={row.text} data={row} />;
         })}
       </div>
     </div>

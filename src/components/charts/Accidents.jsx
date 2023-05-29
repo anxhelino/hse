@@ -15,7 +15,7 @@ const Accidents = ({ data }) => {
       <BarChart width={750} height={250} data={data}>
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='name' />
-        <YAxis />
+        <YAxis dataKey='cases' />
         <Tooltip />
         <Legend />
         <Bar dataKey='cases' fill='#8884d8' />
