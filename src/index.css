@@ -595,7 +595,48 @@ a {
     border: 1px solid #0f2142;
   }
 
-  /* .profileIcon:hover .welcomeUserText {
-    border-bottom-color: white;
-  } */
+  .assetsFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .assetsButton {
+    background-color: #0e3783;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+  }
+
+  .assetsSearch {
+    font-size: 1.05rem;
+    padding: 0.4rem;
+    width: 17rem;
+    border-radius: 5px;
+    border: 1px solid #0e3783;
+    outline: none;
+  }
+
+  .assets {
+    width: 80%;
+  }
+  .assetsTable {
+    margin-top: 3rem;
+  }
+
+  .pageNumberContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #0e3783;
+    width: 2rem;
+    height: 2rem;
+    margin: 2rem auto;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 }

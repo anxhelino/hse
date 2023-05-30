@@ -2,14 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBook,
   faFlag,
-  faGraduationCap,
+  faGear,
   faHouse,
   faMagnifyingGlassLocation,
+  faTools,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
@@ -66,19 +67,19 @@ const Navigation = () => {
             <p id='issues'>Issues</p>
           </div>
         </Link>
-        <Link to='/about'>
-          <div id='about' className={activeLink === 'about' ? 'active' : ''}>
-            <FontAwesomeIcon icon={faCircleInfo} id='about' />
-            <p id='about'>About</p>
+        <Link to='/settings'>
+          <div
+            id='settings'
+            className={activeLink === 'settings' ? 'active' : ''}
+          >
+            <FontAwesomeIcon icon={faGear} id='settings' />
+            <p id='settings'>Settings</p>
           </div>
         </Link>
-        <Link to='./training'>
-          <div
-            id='training'
-            className={activeLink === 'training' ? 'active' : ''}
-          >
-            <FontAwesomeIcon icon={faGraduationCap} id='training' />
-            <p id='training'>Training</p>
+        <Link to='./assets'>
+          <div id='assets' className={activeLink === 'assets' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faTools} id='assets' />
+            <p id='assets'>Assets</p>
           </div>
         </Link>
         <Link to='./policies'>

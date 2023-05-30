@@ -3,14 +3,14 @@ import Header from './components/Header';
 import MobileNavigation from './components/MobileNavigation';
 import Navigation from './components/Navigation';
 import {
-  About,
+  Settings,
   Dashboard,
   Audits,
   Issues,
   Policies,
   Report,
   Sites,
-  Training,
+  Assets,
   Diary,
 } from './pages';
 
@@ -24,13 +24,13 @@ function App() {
           <MobileNavigation />
           <Routes>
             <Route path='/' element={<Dashboard />} />
-            <Route path='/about' element={<About />} />
+            <Route path='/settings' element={<Settings />} />
             <Route path='/audits' element={<Audits />} />
             <Route path='/issues' element={<Issues />} />
             <Route path='/policies' element={<Policies />} />
             <Route path='/report' element={<Report />} />
             <Route path='/sites' element={<Sites />} />
-            <Route path='/training' element={<Training />} />
+            <Route path='/assets' element={<Assets />} />
             <Route path='/dairy' element={<Diary />} />
           </Routes>
         </Router>
