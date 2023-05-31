@@ -639,4 +639,36 @@ a {
     font-size: 1.2rem;
     cursor: pointer;
   }
+
+  .pageSubTitle {
+    border-bottom: 1px solid #0e3783;
+    margin-bottom: 2rem;
+  }
+
+  .settingSection {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    border-bottom: 2px solid #d3d3d3;
+    padding: 2rem;
+  }
+  .settingsFlex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 5rem;
+    float: right;
+  }
+
+  .settingTitle {
+    min-width: 10rem;
+  }
+
+  .settingsCard {
+    width: 12rem;
+    padding: 0 1rem;
+
+    border-right: 1px solid #d3d3d3;
+    margin-bottom: 0.6rem;
+  }
 }

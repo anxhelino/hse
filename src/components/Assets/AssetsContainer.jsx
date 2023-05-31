@@ -8,7 +8,9 @@ import PageNumber from './PageNumber';
 const AssetsContainer = () => {
   return (
     <div className='assetsContainer'>
-      <h1>Assets</h1>
+      <div className='pageSubTitle'>
+        <h1>Assets</h1>
+      </div>
       <div className='assetsFlex'>
         <AssetsButton />
         <AssetsSearch />
