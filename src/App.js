@@ -12,6 +12,7 @@ import {
   Sites,
   Assets,
   Diary,
+  CreateNewSite,
 } from './pages';
 
 function App() {
@@ -29,7 +30,10 @@ function App() {
             <Route path='/issues' element={<Issues />} />
             <Route path='/policies' element={<Policies />} />
             <Route path='/report' element={<Report />} />
-            <Route path='/sites' element={<Sites />} />
+            <Route path='/sites'>
+              <Route index element={<Sites />} />
+              <Route path='add-new-site' element={<CreateNewSite />} />
+            </Route>
             <Route path='/assets' element={<Assets />} />
             <Route path='/dairy' element={<Diary />} />
           </Routes>

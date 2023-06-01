@@ -671,4 +671,18 @@ a {
     border-right: 1px solid #d3d3d3;
     margin-bottom: 0.6rem;
   }
+  .hidden {
+    display: block;
+  }
+  .mapsContainer {
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+  .mapsContainer .map {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

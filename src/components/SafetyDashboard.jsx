@@ -149,7 +149,7 @@ const damages = [
 
 const SafetyDashboard = () => {
   return (
-    <div className='safetyDashboardContainer'>
+    <div className='safetyDashboardContainer hidden'>
       <h3 className='safetyDashboardTitle'>Safety Dashboard</h3>
       {data.map((row, i) => {
         return (

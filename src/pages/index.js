@@ -4,9 +4,10 @@ import Dashboard from './Dashboard';
 import Issues from './Issues';
 import Policies from './Policies';
 import Report from './Report';
-import Sites from './Sites';
+import Sites from './sites/Sites';
 import Assets from './Assets';
 import Diary from './Dairy';
+import CreateNewSite from './sites/CreateNewSite';
 
 export {
   Settings,
@@ -18,4 +19,5 @@ export {
   Sites,
   Assets,
   Diary,
+  CreateNewSite,
 };
