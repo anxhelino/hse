@@ -13,6 +13,10 @@ import {
   Assets,
   Diary,
   CreateNewSite,
+  SiteInformation,
+  SiteDocuments,
+  SiteActions,
+  SiteJobs,
 } from './pages';
 
 function App() {
@@ -32,7 +36,12 @@ function App() {
             <Route path='/report' element={<Report />} />
             <Route path='/sites'>
               <Route index element={<Sites />} />
-              <Route path='add-new-site' element={<CreateNewSite />} />
+              <Route path='add-new-site' element={<CreateNewSite />}>
+                <Route path='siteInformation' element={<SiteInformation />} />
+                <Route path='siteDocuments' element={<SiteDocuments />} />
+                <Route path='siteActions' element={<SiteActions />} />
+                <Route path='siteJobs' element={<SiteJobs />} />
+              </Route>
             </Route>
             <Route path='/assets' element={<Assets />} />
             <Route path='/dairy' element={<Diary />} />

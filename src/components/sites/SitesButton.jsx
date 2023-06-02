@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SitesButton = () => {
   return (
     <div className='assetsButtonContainer'>
-      <Link to={'add-new-site'} className='assetsButton'>
+      <Link to={'add-new-site/siteInformation'} className='assetsButton'>
         <FontAwesomeIcon icon={faPlus} />
         Add New Site
       </Link>

@@ -685,4 +685,38 @@ a {
     width: 100%;
     margin: 0 auto;
   }
+
+  .createNewSiteContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .createNewSiteContainer a {
+    font-size: 1.05rem;
+  }
+
+  .linkContainer {
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+    padding: 0 0.7rem;
+
+    font-weight: 700;
+  }
+  .linkContainer a {
+    color: rgb(37, 37, 37);
+  }
+  .createNewSiteContainer .active {
+    background-color: white;
+    margin-top: 1rem;
+    height: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    border-top: 1px solid #0e0d0d;
+
+    border-top-left-radius: 18px;
+  }
+  .createNewSiteContainer .active a {
+    color: #251b21;
+  }
 }
