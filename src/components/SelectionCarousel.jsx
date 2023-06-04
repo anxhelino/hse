@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ReactPlayer from 'react-player';
 
 const videos = [
-  ';video1.mp4',
-  'video2.mp4',
-  'video3.mp4',
-  'video4.mp4',
-  'video5.mp4',
-  'video6.mp4',
-  'video7.mp4',
+  'https://player.vimeo.com/video/499370625?h=e11b012f31',
+  'https://player.vimeo.com/video/499370625?h=e11b012f31',
+  'https://player.vimeo.com/video/502750801?h=295c913c01',
+  'https://player.vimeo.com/video/499772935?h=19a8fdb29a',
+  'https://player.vimeo.com/video/499674135?h=648bebf7a4',
+  'https://player.vimeo.com/video/499674135?h=648bebf7a4',
+  'https://player.vimeo.com/video/499365548?h=110368bfb9',
+  'https://player.vimeo.com/video/499706753?h=0f3a3f76cc',
+  'https://player.vimeo.com/video/499679264?h=9119cadefe'
 ];
 
 const SelectionCarousel = ({ onVideoSelect }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(null);
 
-  const handleClickNext = (event) => {
-    event.preventDefault();
+  const handleClickNext = () => {
     if (startIndex + 5 < videos.length) {
       setStartIndex(startIndex + 1);
       setSlideDirection('next');
@@ -37,12 +39,38 @@ const SelectionCarousel = ({ onVideoSelect }) => {
 
   const visibleVideos = videos.slice(startIndex, startIndex + 5);
 
+  useEffect(() => {
+    const autoplayTimer = setTimeout(() => {
+      handleClickNext();
+    }, 5000);
+
+    return () => {
+      clearTimeout(autoplayTimer);
+    };
+  }, [startIndex]);
+
+  const handleVideoSelect = (video) => {
+    onVideoSelect(video);
+  };
+
+  const handleVideoEnded = () => {
+    handleClickNext();
+  };
+
   return (
     <div className="selection-carousel">
       <div className="video-list">
         {visibleVideos.map((video, index) => (
-          <div key={index} onClick={() => onVideoSelect(video)} className={`video-slide ${slideDirection}`}>
-            <img src={`thumbnail_${video}`} alt={`Video ${index + startIndex + 1}`} />
+          <div key={index} onClick={() => handleVideoSelect(video)} className={`video-slide ${slideDirection}`}>
+            <ReactPlayer
+              url={video}
+              width="100%"
+              height="auto"
+              controls={false}
+              playing={index === 0}
+              autoplayTimer
+              onEnded={handleVideoEnded}
+            />
           </div>
         ))}
       </div>

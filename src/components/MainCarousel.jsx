@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 
 const MainCarousel = ({ video }) => {
-  const [selectedVideo, setSelectedVideo] = useState(video);
+  const [playing, setPlaying] = useState(true);
+  const defaultVideo = video || 'https://player.vimeo.com/video/499370625?h=e11b012f31';
+
+  const handleReady = () => {
+    setPlaying(true);
+  };
+
+  const handleStart = () => {
+    setPlaying(true);
+  };
 
   return (
     <div className="main-carousel">
-      {selectedVideo ? (
-        <video controls className="default-video">
-<source src={selectedVideo} type="video/mp4" />
-
-        </video>
-      ) : (
-        <p>No video selected</p>
-      )}
+      <ReactPlayer
+        url={defaultVideo}
+        controls
+        playing={playing}
+        onReady={handleReady}
+        onStart={handleStart}
+      />
     </div>
   );
 };
