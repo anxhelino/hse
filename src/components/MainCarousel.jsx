@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const MainCarousel = ({ video }) => {
+  const [selectedVideo, setSelectedVideo] = useState(video);
+
   return (
     <div className="main-carousel">
-      {video ? (
+      {selectedVideo ? (
         <video controls className="default-video">
-          <source src={"video"} type="video/mp4" />
+<source src={selectedVideo} type="video/mp4" />
+
         </video>
       ) : (
         <p>No video selected</p>

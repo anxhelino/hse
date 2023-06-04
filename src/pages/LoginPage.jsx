@@ -14,9 +14,8 @@ function LoginPage({ setIsAuthenticated }) {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
-        setIsAuthenticated(true);
-        return <Navigate to="/dashboard" />;
-
+      setIsAuthenticated(true);
+      return <Navigate to="/dashboard" />;
     }
 
     setValidated(true);
@@ -24,8 +23,8 @@ function LoginPage({ setIsAuthenticated }) {
 
   return (
     <div className="signup-container">
-      <form noValidate validated={validated} onSubmit={handleSubmit} className="signup-form">
-      <h2>Login Page</h2>
+      <form noValidate validated={validated.toString()} onSubmit={handleSubmit} className="signup-form">
+        <h2>Login Page</h2>
         <div className="mb-3">
           <label htmlFor="email">Email</label>
           <input

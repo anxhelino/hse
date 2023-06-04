@@ -18,7 +18,6 @@ function Signup({ setIsAuthenticated }) {
       setValidated(true);
     } else {
       setIsAuthenticated(true);
-      setValidated(true);
       setSignupCompleted(true);
     }
   };
@@ -26,6 +25,8 @@ function Signup({ setIsAuthenticated }) {
   if (signupCompleted) {
     return <Navigate to="/dashboard" />;
   }
+
+  const invalid = (field) => validated && !field;
 
   return (
     <div className="signup-container">
@@ -40,9 +41,9 @@ function Signup({ setIsAuthenticated }) {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={validated && !email ? 'is-invalid' : ''}
+            className={invalid(email) ? 'is-invalid' : ''}
           />
-          {validated && !email && <div className="invalid-feedback">Please provide a valid email.</div>}
+          {invalid(email) && <div className="invalid-feedback">Please provide a valid email.</div>}
         </div>
 
         <div className="mb-3">
@@ -53,9 +54,9 @@ function Signup({ setIsAuthenticated }) {
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className={validated && !password ? 'is-invalid' : ''}
+            className={invalid(password) ? 'is-invalid' : ''}
           />
-          {validated && !password && <div className="invalid-feedback">Please provide a password.</div>}
+          {invalid(password) && <div className="invalid-feedback">Please provide a password.</div>}
         </div>
 
         <div className="mb-3">
@@ -66,11 +67,10 @@ function Signup({ setIsAuthenticated }) {
             required
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className={validated && (!confirmPassword || password !== confirmPassword) ? 'is-invalid' : ''}
+            className={invalid(confirmPassword) || password !== confirmPassword ? 'is-invalid' : ''}
           />
-          {validated && (!confirmPassword || password !== confirmPassword) && (
-            <div className="invalid-feedback">Passwords do not match.</div>
-          )}
+          {invalid(confirmPassword) && <div className="invalid-feedback">Please confirm the password.</div>}
+          {password !== confirmPassword && <div className="invalid-feedback">Passwords do not match.</div>}
         </div>
 
         <div className="mb-3">

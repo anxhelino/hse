@@ -19,8 +19,6 @@ const Audits = () => {
 
   return (
     <div className="audits-container">
-      <h1>Video Carousel</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
     <MainCarousel video={selectedVideo} />
       <SelectionCarousel videos={videos} onVideoSelect={handleVideoSelect} />
     </div>
