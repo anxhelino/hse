@@ -680,6 +680,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
+    gap: 2rem;
   }
   .mapsContainer .map {
     width: 100%;
@@ -689,6 +690,7 @@ a {
   .createNewSiteContainer {
     width: 90%;
     margin: 0 auto;
+    border: 1px solid #d3d3d3;
   }
   .createNewSiteContainer a {
     font-size: 1.05rem;
@@ -718,5 +720,39 @@ a {
   }
   .createNewSiteContainer .active a {
     color: #251b21;
+  }
+  .createSiteInfoContainer form {
+    width: fit-content;
+    display: grid;
+    gap: 0.7rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .inputRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inputRow span {
+    width: 8rem;
+  }
+  .inputRow input {
+    width: 11rem;
+    height: 2rem;
+    padding: 0.2rem;
+    outline: none;
+  }
+
+  .marker input {
+    width: 8rem;
+  }
+  .createSiteFlex {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .createSiteFlex .leaflet-container {
+    height: 40rem;
   }
 }
