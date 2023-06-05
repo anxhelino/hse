@@ -18,6 +18,7 @@ import {
   SiteActions,
   SiteJobs,
 } from './pages';
+import SharedComponent from './components/SharedComponent';
 
 function App() {
   return (
@@ -25,26 +26,28 @@ function App() {
       <Header />
       <div className='desktopContainer'>
         <Router>
-          <Navigation />
-          <MobileNavigation />
+          {/* <Navigation />
+          <MobileNavigation /> */}
           <Routes>
-            <Route path='/' element={<Dashboard />} />
-            <Route path='/settings' element={<Settings />} />
-            <Route path='/audits' element={<Audits />} />
-            <Route path='/issues' element={<Issues />} />
-            <Route path='/policies' element={<Policies />} />
-            <Route path='/report' element={<Report />} />
-            <Route path='/sites'>
-              <Route index element={<Sites />} />
-              <Route path='add-new-site' element={<CreateNewSite />}>
-                <Route path='siteInformation' element={<SiteInformation />} />
-                <Route path='siteDocuments' element={<SiteDocuments />} />
-                <Route path='siteActions' element={<SiteActions />} />
-                <Route path='siteJobs' element={<SiteJobs />} />
+            <Route element={<SharedComponent />}>
+              <Route path='/' element={<Dashboard />} />
+              <Route path='/settings' element={<Settings />} />
+              <Route path='/audits' element={<Audits />} />
+              <Route path='/issues' element={<Issues />} />
+              <Route path='/policies' element={<Policies />} />
+              <Route path='/report' element={<Report />} />
+              <Route path='/sites'>
+                <Route index element={<Sites />} />
+                <Route path='add-new-site' element={<CreateNewSite />}>
+                  <Route path='siteInformation' element={<SiteInformation />} />
+                  <Route path='siteDocuments' element={<SiteDocuments />} />
+                  <Route path='siteActions' element={<SiteActions />} />
+                  <Route path='siteJobs' element={<SiteJobs />} />
+                </Route>
               </Route>
+              <Route path='/assets' element={<Assets />} />
+              <Route path='/dairy' element={<Diary />} />
             </Route>
-            <Route path='/assets' element={<Assets />} />
-            <Route path='/dairy' element={<Diary />} />
           </Routes>
         </Router>
       </div>
