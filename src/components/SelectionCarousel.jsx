@@ -2,18 +2,15 @@ import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 
 const videos = [
-  'https://player.vimeo.com/video/499370625?h=e11b012f31',
-  'https://player.vimeo.com/video/499370625?h=e11b012f31',
   'https://player.vimeo.com/video/502750801?h=295c913c01',
   'https://player.vimeo.com/video/499772935?h=19a8fdb29a',
-  'https://player.vimeo.com/video/499674135?h=648bebf7a4',
   'https://player.vimeo.com/video/499674135?h=648bebf7a4',
   'https://player.vimeo.com/video/499365548?h=110368bfb9',
   'https://player.vimeo.com/video/499706753?h=0f3a3f76cc',
   'https://player.vimeo.com/video/499679264?h=9119cadefe'
 ];
 
-const SelectionCarousel = ({ onVideoSelect }) => {
+const SelectionCarousel = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(null);
 
@@ -49,10 +46,6 @@ const SelectionCarousel = ({ onVideoSelect }) => {
     };
   }, [startIndex]);
 
-  const handleVideoSelect = (video) => {
-    onVideoSelect(video);
-  };
-
   const handleVideoEnded = () => {
     handleClickNext();
   };
@@ -61,14 +54,13 @@ const SelectionCarousel = ({ onVideoSelect }) => {
     <div className="selection-carousel">
       <div className="video-list">
         {visibleVideos.map((video, index) => (
-          <div key={index} onClick={() => handleVideoSelect(video)} className={`video-slide ${slideDirection}`}>
+          <div key={index} className={`video-slide ${slideDirection}`}>
             <ReactPlayer
               url={video}
               width="100%"
               height="auto"
               controls={false}
-              playing={index === 0}
-              autoplayTimer
+              autoPlay={index === 0}
               onEnded={handleVideoEnded}
             />
           </div>
