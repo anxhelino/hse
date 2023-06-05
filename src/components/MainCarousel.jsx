@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 
 const MainCarousel = ({ video }) => {
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   const defaultVideo = video || 'https://player.vimeo.com/video/499370625?h=e11b012f31';
+
+  useEffect(() => {
+    setPlaying(true);
+  }, []);
 
   const handleReady = () => {
     setPlaying(true);
