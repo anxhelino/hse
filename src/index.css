@@ -756,4 +756,137 @@ a {
   .createSiteFlex .leaflet-container {
     height: 32rem;
   }
+  .loginContainer {
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .formBackgroundContainer {
+    width: 100%;
+    background-image: url('./assets/images/backgroungLoginPage.avif');
+    height: 100%;
+    background-color: #0e3783;
+  }
+
+  .loginContainer .loginFooter {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 36rem;
+    height: 10rem;
+    border-top-right-radius: 100rem;
+    box-shadow: 2px 0px 8px 3px white;
+  }
+  .loginContainer .otherFooter {
+    background-color: white;
+    position: absolute;
+    height: 2rem;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 2px 0px 8px 3px white;
+  }
+  .another {
+    background-color: white;
+    position: absolute;
+    width: 65px;
+    height: 9rem;
+    bottom: -1.9rem;
+    left: 32.2rem;
+    box-sizing: border-box;
+    border-bottom-left-radius: 50px;
+    /* border-top-right-radius: 20em; */
+    transform: rotate(140deg);
+    box-shadow: 2px 0px 9px 3px white;
+  }
+
+  .chatSupportIconContainer {
+    border: 1px solid #244788;
+    width: fit-content;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    background-color: #0e3783;
+  }
+
+  .chatSupportIconContainer:hover {
+    background-color: white;
+  }
+
+  .chatSupportIconContainer:hover .chatSupportIcon {
+    color: #0e3783;
+    scale: 1.05;
+  }
+
+  .chatSupportIcon {
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+
+  .chatSupportContainer {
+    position: relative;
+  }
+  .chatSupportText {
+    position: absolute;
+    left: 10rem;
+    top: -1.2rem;
+    z-index: 1000;
+    color: #0e3783;
+    font-weight: 700;
+  }
+  .chatSupportText h2 {
+    border-bottom: 1px solid #244788;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .chatSupportText p {
+    letter-spacing: 0.04rem;
+  }
+
+  .loginFormContainer {
+    width: fit-content;
+    position: absolute;
+    left: 70%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+    padding: 2rem;
+    border-radius: 40px;
+  }
+
+  .loginFormContainer h1 {
+    color: #02183f;
+  }
+
+  .loginFormContainer form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.2rem;
+    font-size: 1.1rem;
+  }
+
+  .loginFormContainer p {
+    color: #696969;
+  }
+
+  .loginFormContainer button {
+    float: right;
+    background-color: #0e3783;
+    border: none;
+    font-size: 1.05rem;
+    color: white;
+    font-weight: 700;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
 }
