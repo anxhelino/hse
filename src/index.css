@@ -902,6 +902,10 @@ a {
     width: 6rem;
     box-shadow: 0 0 20px white;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .logoContainer:hover {
+    box-shadow: 0 0 90px white;
   }
   .logoContainer img {
     height: 6rem;
