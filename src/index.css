@@ -870,8 +870,11 @@ a {
     display: block;
     width: 100%;
     margin-bottom: 1.5rem;
-    padding: 0.5rem 0.2rem;
+    padding: 0.5rem 0.4rem;
     font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 0 0 4px #0e3783;
   }
 
   .loginFormContainer p {
@@ -888,5 +891,25 @@ a {
     padding: 0.7rem 1rem;
     border-radius: 10px;
     cursor: pointer;
+  }
+  .logoContainer {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+  }
+  .logoContainer img {
+    height: 6rem;
+    width: 6rem;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+  }
+  .loginLogoText {
+    position: absolute;
+    top: 50px;
+    left: 9rem;
   }
 }
