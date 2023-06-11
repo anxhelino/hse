@@ -35,28 +35,64 @@ const marker = {
   text: 'Latitude and longitude *',
 };
 
+const advanced = [
+  {
+    text: 'Site Managers',
+  },
+  {
+    text: 'Assistant Site Managers',
+  },
+  {
+    text: 'Health & Safety Representatives',
+  },
+  {
+    text: 'Managed By Departments',
+  },
+  {
+    text: 'UPRN',
+  },
+];
+
 const SiteInformationContainer = () => {
   return (
-    <div className='createSiteFlex'>
-      <div className='createSiteInfoContainer'>
-        <form>
-          {dataHeader.map((item, index) => {
-            return <InputText key={item.text} text={item.text} />;
-          })}
-          <div className='infoHeader'>
-            <h3>Site Address</h3>
-          </div>
-          {siteAddress.map((item, index) => {
-            return <InputText key={item.text} text={item.text} />;
-          })}
-          <div className='infoHeader'>
-            <h3>Site Map Marker</h3>
-          </div>
+    <>
+      <div className='createSiteWrapper'>
+        <div className='createSiteFlex'>
+          <div className='createSiteInfoContainer'>
+            <form>
+              {dataHeader.map((item, index) => {
+                return <InputText key={item.text} text={item.text} />;
+              })}
+              <div className='infoHeader'>
+                <h3>Site Address</h3>
+              </div>
+              {siteAddress.map((item, index) => {
+                return <InputText key={item.text} text={item.text} />;
+              })}
+              <div className='infoHeader'>
+                <h3>Site Map Marker</h3>
+              </div>
 
-          <div className='inputRow marker'>
-            <span>{marker.text}</span>
-            <input type='text' placeholder='Latitude' />
-            <input type='text' placeholder='Longitude' />
+              <div className='inputRow marker'>
+                <span>{marker.text}</span>
+                <input type='text' placeholder='Latitude' />
+                <input type='text' placeholder='Longitude' />
+              </div>
+            </form>
+          </div>
+          <AddSiteMap />
+        </div>
+        <div className='siteInfoAdvanced'>
+          <h2>Advanced</h2>
+          {advanced.map((item) => {
+            return <InputText key={item.text} text={item.text} />;
+          })}
+          <div
+            className='sitePlansUpload inputRow
+          '
+          >
+            <span>Site Plans</span>
+            <input type='file' className='inputUpload' />
           </div>
           <div className='assetsButtonContainer' style={{ marginTop: '2rem' }}>
             <Link
@@ -68,10 +104,9 @@ const SiteInformationContainer = () => {
               Add New Site
             </Link>
           </div>
-        </form>
+        </div>
       </div>
-      <AddSiteMap />
-    </div>
+    </>
   );
 };
 
