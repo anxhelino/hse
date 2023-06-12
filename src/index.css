@@ -930,8 +930,12 @@ a {
   }
   .siteInfoAdvanced input {
     width: 40rem;
-    margin-bottom: 1rem;
+
     height: 2.2rem;
+  }
+
+  .siteInfoAdvanced .inputRow {
+    margin-bottom: 1rem;
   }
   .inputUpload {
     padding: 2rem;
