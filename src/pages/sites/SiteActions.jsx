@@ -1,7 +1,11 @@
-import React from 'react';
+import SiteActionsContainer from '../../components/sites/siteActions/SiteActionsContainer';
 
 const SiteActions = () => {
-  return <div>SiteActions</div>;
+  return (
+    <div>
+      <SiteActionsContainer />
+    </div>
+  );
 };
 
 export default SiteActions;
