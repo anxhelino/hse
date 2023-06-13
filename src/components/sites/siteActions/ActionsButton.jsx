@@ -2,10 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-const ActionsButton = () => {
+const ActionsButton = ({ setOpenModal }) => {
   return (
     <div className='actionsButtonContainer'>
-      <button className='actionButton'>
+      <button
+        className='actionButton'
+        onClick={() => {
+          setOpenModal.current.openModal();
+        }}
+      >
         <FontAwesomeIcon icon={faPlus} />
         Create Action
       </button>
