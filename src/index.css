@@ -1081,6 +1081,9 @@ a {
   .filtersHeaderContainer {
     display: flex;
     gap: 3rem;
+    margin-top: 4rem;
+    border-bottom: 2px solid #0e3783;
+    padding-bottom: 1rem;
   }
 
   .siteActionsContainer {
@@ -1137,5 +1140,47 @@ a {
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+  .actionsButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem 1rem;
+  }
+  .actionButton {
+    background-color: #144db8;
+    color: white;
+
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .actionButton .svg-inline--fa {
+    margin-right: 0.2rem;
+  }
+
+  .siteActionsContainer {
+    min-height: 80dvh;
+  }
+
+  .actionsImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-direction: column;
+    color: #6b6b6b;
+  }
+
+  .actionsImage .actionsMainParagraph {
+    color: black;
+    font-weight: 700;
+  }
+
+  .actionsImage img {
+    width: 30%;
+    height: 30%;
   }
 }
