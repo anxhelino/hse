@@ -1195,8 +1195,9 @@ a {
 
   .modal-content-wrapper {
     position: fixed;
-    width: 300px;
-    height: 300px;
+    width: 40dvw;
+    min-width: 400px;
+    height: fit-content;
     background-color: white;
     margin: auto;
     z-index: 1000;
@@ -1205,5 +1206,64 @@ a {
     left: 0;
     right: 0;
     padding: 50px;
+    border-radius: 10px;
+  }
+
+  .modal-content {
+    margin: auto;
+    width: fit-content;
+  }
+
+  .modal-content input {
+    width: 30rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: black;
+  }
+  .modal-content label {
+    display: block;
+    color: #6b6b6b;
+    font-size: 1.1rem;
+  }
+  .actionTitle,
+  .actionDescription,
+  .actionAssigned {
+    border: none;
+
+    font-size: 1.1rem;
+    border-radius: 5px;
+  }
+
+  .actionAssigned {
+    border: 1px solid #d3d3d3;
+    margin-top: 0.5rem;
+    padding: 0.1rem 0.2rem;
+  }
+
+  .actionTitle {
+    font-size: 1.5rem;
+  }
+
+  .actionsDropdownContainer select {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    font-size: 1.05rem;
+    padding: 0 0.5rem;
+    height: 2.5rem;
+    color: #494848;
+    margin: 0.5rem 0;
+  }
+  .actionsDropdownContainer {
+    margin: 1.5rem 0;
+  }
+
+  .closeActionsButton {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    scale: 1.7;
+    cursor: pointer;
   }
 }

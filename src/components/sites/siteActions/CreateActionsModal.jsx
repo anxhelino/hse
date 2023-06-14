@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useImperativeHandle, useState, forwardRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClose } from '@fortawesome/free-solid-svg-icons';
 
 const CreateActionsModal = (props, ref) => {
   const [modalState, setModalState] = useState(false);
@@ -54,6 +56,12 @@ const CreateActionsModal = (props, ref) => {
             }}
             className='modal-content-wrapper'
           >
+            <div
+              className='closeActionsButton'
+              onClick={() => setModalState(false)}
+            >
+              <FontAwesomeIcon icon={faClose} />
+            </div>
             <motion.div
               className='modal-content'
               initial={{
