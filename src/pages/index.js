@@ -5,7 +5,7 @@ import Issues from './Issues';
 import Policies from './Policies';
 import Report from './Report';
 import Sites from './sites/Sites';
-import Assets from './Assets';
+import Assets from './assets/Assets';
 import Diary from './Dairy';
 import CreateNewSite from './sites/CreateNewSite';
 import SiteInformation from './sites/SiteInformation';

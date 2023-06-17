@@ -18,6 +18,7 @@ import {
 } from './pages';
 import SharedComponent from './components/SharedComponent';
 import Login from './pages/login/Login';
+import CreateNewAsset from './pages/assets/CreateNewAsset';
 
 function App() {
   return (
@@ -40,7 +41,10 @@ function App() {
               <Route path='siteJobs' element={<SiteJobs />} />
             </Route>
           </Route>
-          <Route path='/assets' element={<Assets />} />
+          <Route path='/assets'>
+            <Route index element={<Assets />} />
+            <Route path='create-new-asset' element={<CreateNewAsset />} />
+          </Route>
           <Route path='/dairy' element={<Diary />} />
         </Route>
       </Routes>

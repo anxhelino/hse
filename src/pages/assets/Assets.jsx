@@ -1,5 +1,5 @@
 import React from 'react';
-import AssetsContainer from '../components/Assets/AssetsContainer';
+import AssetsContainer from '../../components/Assets/AssetsContainer';
 
 const Assets = () => {
   return (
