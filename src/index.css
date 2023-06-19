@@ -643,6 +643,7 @@ a {
   .pageSubTitle {
     border-bottom: 1px solid #0e3783;
     margin-bottom: 2rem;
+    position: relative;
   }
 
   .settingSection {
@@ -1265,5 +1266,75 @@ a {
     top: 1rem;
     scale: 1.7;
     cursor: pointer;
+  }
+  .leftSideForm {
+    width: 45%;
+    padding: 0 2.3rem;
+  }
+  .leftSideForm p,
+  label {
+    color: #494848;
+    font-size: 1.1rem;
+  }
+
+  .assetsContainer form .createAssetsInput input {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid #d3d3d3;
+    font-size: 1.05rem;
+    color: #494848;
+    border-radius: 5px;
+  }
+  .cancelCreateAsset {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+
+    background-color: white;
+    border: 2px solid #d3d3d3;
+    height: 3rem;
+    padding: 0 1.7rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #144db8;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .issuesContainer .pageSubTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .issuesContainer .pageSubTitle .actionButton {
+    height: 3.2rem;
+  }
+
+  .issuesWrapper .safetyDashboardContainer {
+    width: 100%;
+    min-height: 70dvh;
+  }
+
+  .issuesWrapper {
+    width: 90%;
+    margin: auto;
+  }
+  .issuesImage {
+    width: 30%;
+    height: 30%;
+  }
+  .emptyIssuesContainer {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    margin-top: 4rem;
+    color: #6b6b6b;
+  }
+
+  .issuesMainParagraph {
+    color: black;
+    font-weight: 700;
   }
 }
