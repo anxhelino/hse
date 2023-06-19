@@ -1337,4 +1337,86 @@ a {
     color: black;
     font-weight: 700;
   }
+  input[type='file'] {
+    display: none;
+  }
+
+  .createIssueModal .modal-content-wrapper {
+    width: fit-content;
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    min-width: none;
+
+    justify-content: flex-start;
+  }
+  .createIssueModal .modal-content {
+    width: 100%;
+  }
+  .reportIssuesFirstStep h2 {
+    color: rgb(63, 62, 62);
+  }
+  .reportIssuesFirstStep div {
+    border: 2px solid #d3d3d3;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 0.8rem 0;
+    border-radius: 10px;
+    color: #0e3783;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+  }
+  .reportIssuesFirstStep div:hover {
+    background-color: #cedbf0;
+  }
+
+  .secondStepHeader {
+    margin: 1rem 0;
+  }
+  .secondStepHeader .issueTypeInfo {
+    border: 1px solid #d3d3d3;
+    padding: 0.2rem 0.5rem;
+    margin-right: 2rem;
+  }
+  .secondStepHeader .issueDate {
+    background-color: #0e3783;
+    color: white;
+    padding: 0.2rem 0.6rem;
+  }
+  .fa-calendar {
+    margin-right: 1rem;
+  }
+  .issuePhotoUpload .fa-image-portrait {
+    margin-right: 1rem;
+  }
+  .issuePhotoUpload {
+    cursor: pointer;
+  }
+
+  .createIssueButtons {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  .createIssueButtons .cancelCreateIssue {
+    background-color: white;
+    border: 2px solid #d3d3d3;
+    padding: 0.6rem 2rem;
+    color: #0e3783;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .submitCreateIssue {
+    background-color: #0e3783;
+    border: none;
+    padding: 0.6rem 2rem;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
 }
