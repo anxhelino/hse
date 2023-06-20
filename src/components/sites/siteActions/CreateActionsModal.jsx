@@ -65,11 +65,9 @@ const CreateActionsModal = (props, ref) => {
             <motion.div
               className='modal-content'
               initial={{
-                x: 100,
                 opacity: 0,
               }}
               animate={{
-                x: 0,
                 opacity: 1,
                 transition: {
                   delay: 0.3,
@@ -77,7 +75,6 @@ const CreateActionsModal = (props, ref) => {
                 },
               }}
               exit={{
-                x: 100,
                 opacity: 0,
                 transition: {
                   duration: 0.3,
