@@ -26,7 +26,7 @@ a {
 
 .mobileHeader {
   display: flex;
-  background-color: #0e3783;
+  background-color: #23294d;
 
   width: 100%;
   margin: 0;
@@ -340,7 +340,7 @@ a {
 
     min-height: 100%;
     position: sticky;
-    background-color: #0e3783;
+    background-color: #23294d;
     top: 0;
     border-bottom-right-radius: 60px;
   }
@@ -371,7 +371,7 @@ a {
   }
 
   .navigation {
-    background-color: #0e3783;
+    background-color: #23294d;
     width: 11rem;
     margin: 0.5rem 0;
     padding: 1rem 1rem 1rem 0.5rem;
@@ -423,7 +423,7 @@ a {
 
   .desktopNavProfile {
     display: block;
-    background-color: #0e3783;
+    background-color: #23294d;
     width: 11rem;
     padding: 0.2rem;
     margin-top: 0.5rem;
