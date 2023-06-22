@@ -1,4 +1,3 @@
-import React from 'react';
 import IssuesImage from '../../assets/images/tracking-track-svgrepo-com.svg';
 
 const IssuesList = () => {

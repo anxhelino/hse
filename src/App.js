@@ -19,6 +19,7 @@ import {
 import SharedComponent from './components/SharedComponent';
 import Login from './pages/login/Login';
 import CreateNewAsset from './pages/assets/CreateNewAsset';
+import CreateNewAudit from './pages/audits/CreateNewAudit';
 
 function App() {
   return (
@@ -28,7 +29,10 @@ function App() {
         <Route element={<SharedComponent />}>
           <Route path='/' element={<Dashboard />} />
           <Route path='/settings' element={<Settings />} />
-          <Route path='/audits' element={<Audits />} />
+          <Route path='/audits'>
+            <Route index element={<Audits />} />
+            <Route path='create-new-audit' element={<CreateNewAudit />} />
+          </Route>
           <Route path='/issues' element={<Issues />} />
           <Route path='/policies' element={<Policies />} />
           <Route path='/report' element={<Report />} />

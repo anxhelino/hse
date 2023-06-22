@@ -1,5 +1,5 @@
 import Settings from './Settings';
-import Audits from './Audits';
+import Audits from './audits/Audits';
 import Dashboard from './Dashboard';
 import Issues from './issues/Issues';
 import Policies from './Policies';
