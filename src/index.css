@@ -1419,4 +1419,41 @@ a {
     font-size: 0.9rem;
     cursor: pointer;
   }
+
+  .auditFormContainer {
+    width: 70%;
+    margin: auto;
+  }
+
+  .auditFormContainer form .auditInput {
+    border: 2px solid #d3d3d3;
+    color: #494848;
+    margin-top: 2rem;
+    padding: 1rem 1rem 2rem 1rem;
+    border-radius: 10px;
+  }
+  .auditFormContainer form .auditInput p {
+    font-size: 1.09rem;
+  }
+  .auditInput input {
+    width: 50%;
+    font-size: 1.1rem;
+    border: 1px solid #d3d3d3;
+    color: #494848;
+    border-radius: 5px;
+    height: 2.5rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .auditInput .addConductedNote {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.05rem;
+    color: #0e3783;
+    cursor: pointer;
+    align-items: center;
+  }
+  .auditInput .addConductedNote svg {
+    margin-right: 0.5rem;
+  }
 }
