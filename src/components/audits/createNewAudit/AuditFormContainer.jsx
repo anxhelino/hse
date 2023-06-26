@@ -2,6 +2,23 @@ import React from 'react';
 import IssuesDropdown from '../../Issues/IssuesDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
+import AuditFormInput from './AuditFormInput';
+
+const inputData = [
+  {
+    value: new Date().toLocaleDateString('en-us', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }),
+    label: 'Conducted On',
+  },
+  {
+    value: 'UserName',
+    label: 'Prepared By',
+  },
+];
 
 const AuditFormContainer = () => {
   return (
@@ -14,32 +31,9 @@ const AuditFormContainer = () => {
             placeholder='Audit Title'
           />
         </div>
-        <div className='auditInput'>
-          <p>Conducted On</p>
-          <input
-            type='text'
-            className=''
-            placeholder='Audit Title'
-            value={new Date().toLocaleDateString('en-us', {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            })}
-          />
-          <div className='addConductedNote'>
-            <FontAwesomeIcon icon={faBook} />
-            <span>Add Note</span>
-          </div>
-        </div>
-        <div className='auditInput'>
-          <p>Prepared By</p>
-          <input type='text' placeholder='' value='userName' />
-          <div className='addConductedNote'>
-            <FontAwesomeIcon icon={faBook} />
-            <span>Add Note</span>
-          </div>
-        </div>
+        {inputData.map((data) => {
+          return <AuditFormInput inputData={data} />;
+        })}
         <div className='auditInput'>
           <IssuesDropdown labels='Location' />
           <div className='addConductedNote'>

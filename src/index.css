@@ -1450,8 +1450,11 @@ a {
     justify-content: flex-end;
     font-size: 1.05rem;
     color: #0e3783;
-    cursor: pointer;
+
     align-items: center;
+  }
+  .addConductedNote div {
+    cursor: pointer;
   }
   .auditInput .addConductedNote svg {
     margin-right: 0.5rem;
