@@ -2,7 +2,7 @@ import Settings from './Settings';
 import Audits from './audits/Audits';
 import Dashboard from './Dashboard';
 import Issues from './issues/Issues';
-import Policies from './Policies';
+import Policies from './policies/Policies';
 import Report from './Report';
 import Sites from './sites/Sites';
 import Assets from './assets/Assets';
