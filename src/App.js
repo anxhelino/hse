@@ -49,7 +49,7 @@ function App() {
             <Route index element={<Assets />} />
             <Route path='create-new-asset' element={<CreateNewAsset />} />
           </Route>
-          <Route path='/dairy' element={<Diary />} />
+          <Route path='/diary' element={<Diary />} />
         </Route>
       </Routes>
     </Router>

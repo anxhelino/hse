@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Dairy = () => {
-  return <div>Dairy</div>;
+const Diary = () => {
+  return <div>Diary</div>;
 };
 
-export default Dairy;
+export default Diary;
