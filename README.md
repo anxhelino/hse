@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# HSE Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Enterprise safety managment web app
 
-## Available Scripts
+# Landing page
 
-In the project directory, you can run:
+The dashboard contains some shortcuts of the most important features. Contains a map of the nearest site with the
+ability to clock in to the site and check the site conditions and reports. Contains your safety cards and information
+explaining them. Contains the safety dashboard section with general information about accidents safety cards etc
+explaining them with charts and statistics.
 
-### `npm start`
+# Sites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Sites section contains all the sites added by the company and information about them with the ability to add a new one.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Isues
 
-### `npm test`
+Contains all the issues reported by the teams and the ability to report an isssue
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Settings
 
-### `npm run build`
+The settings section contains all the settings to create a more personalized web app including the ability to edit the
+web apperance and different types of checklists and inspections.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Assets
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contains all the assets registered to the appropriate locations and detailed information about their inspections and
+their conditions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Policies
 
-### `npm run eject`
+Contains all the policies and rules enforced by the company and the ability to upload them.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Audits
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contains a list of all the audits/inspections conducted and the ability to create new ones
